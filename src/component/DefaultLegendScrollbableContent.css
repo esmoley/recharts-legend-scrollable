@@ -1,0 +1,17 @@
+
+/* width */
+.recharts-scrollable-legend-default::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Track */
+.recharts-scrollable-legend-default::-webkit-scrollbar-track {
+    background-color: #99989844;
+    border-radius: 10px;
+}
+
+/* Handle */
+.recharts-scrollable-legend-default::-webkit-scrollbar-thumb {
+    background: #9f9f9f9c;
+    border-radius: 10px;
+}

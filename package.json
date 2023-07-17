@@ -1,0 +1,85 @@
+{
+  "name": "recharts-legend-scrollable",
+  "version": "1.0.0",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "storybook": "npx storybook dev -p 6006 -c storybook",
+    "build-storybook": "storybook build"
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esmoley/recharts-legend-scrollable.git"
+  },
+  "keywords": [
+    "recharts",
+    "legend",
+    "scrollable"
+  ],
+  "author": "Eugene Smoley @esmoley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esmoley/recharts-legend-scrollable/issues"
+  },
+  "homepage": "https://github.com/esmoley/recharts-legend-scrollable#readme",
+  "description": "",
+  "workspaces": [
+    "./lib/"
+  ],
+  "prepare": "npm run build",
+  "prepublishOnly": "npm test && npm run prettier && npm run lint",
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "@types/recharts": "^1.8.24",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6",
+    "@storybook/addon-essentials": "^7.0.26",
+    "@storybook/addon-interactions": "^7.0.26",
+    "@storybook/addon-links": "^7.0.26",
+    "@storybook/addon-storysource": "^7.0.27",
+    "@storybook/blocks": "^7.0.26",
+    "@storybook/react": "^7.0.26",
+    "@storybook/react-vite": "^7.0.26",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.0.26"
+  },
+  "dependencies": {
+    "recharts": "^2.7.2"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  }
+}
