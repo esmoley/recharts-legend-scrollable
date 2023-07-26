@@ -36,7 +36,7 @@ export const Right = {
           <CartesianGrid strokeDasharray='3 3' />
           <XAxis dataKey='name' />
           <YAxis yAxisId='right' />
-          <Tooltip />
+          <Tooltip wrapperStyle={{ overflowY: 'auto', maxHeight: 250, pointerEvents: 'all' }} />
           <LegendScrollable
             align='right'
             layout='vertical'
@@ -98,7 +98,7 @@ export const Bottom = {
         <CartesianGrid strokeDasharray='3 3' />
         <XAxis dataKey='name' />
         <YAxis />
-        <Tooltip />
+        <Tooltip wrapperStyle={{ overflowY: 'auto', maxHeight: 250, pointerEvents: 'all' }} />
         <LegendScrollable align='center' scrollbarStyle={scrollbarStyle} />
         {lines.map((line) => (
           <Line key={line.key} dataKey={line.key} stroke={line.color} activeDot={{ r: 8 }} />
